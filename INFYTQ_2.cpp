@@ -53,28 +53,23 @@ void solve()
 	{
 		cin>>i;
 	}
+	//Building lookup table takes NlogN time
 	pre(a,n); //O(NLogN)
 	int mx=0;
 	for(int i=0;i<n;i++)
 	{
 		for(int j=0;j<n;j++)
 		{
-
 			if(j>=i)
 			{
+				//Queries take O(1) due to idempotent property of min(x,y) operation
 				int temp = (j-i+1)*rmq(a,i,j);
-				//O(N2LogN)
+				//O(N2)
 				mx = max(mx,temp);
 			}
 		}
 	}
 	cout<<mx<<endl;
-
-	// cout<<rmq(a,1,3)<<endl;
-	// cout<<rmq(a,2,4)<<endl;
-	// cout<<rmq(a,3,5)<<endl;
-
-
 }
 
 signed main()
