@@ -14,6 +14,7 @@ int gcd(int a,int b)
     if(b==0) return a;
     return gcd(b,a%b);
 }
+
 void leftRotate(int arr[],int n,int d)
 {
     d=d%n;
