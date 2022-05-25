@@ -51,7 +51,8 @@ void solve()
 		{
 			r=mid;	
 		}
-		else{
+		else
+		{
 			l=mid+1;
 		}
 	}
