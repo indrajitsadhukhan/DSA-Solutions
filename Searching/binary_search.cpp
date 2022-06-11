@@ -44,16 +44,16 @@ void solve()
 	int l=0,r=n-1;
 	int x;
 	cin>>x;
-	while(l<r)
+	while(l<=r)
 	{
 		int mid = (l+r)/2;
-		if(arr[mid]>=x)
+		if(arr[mid]<x)
 		{
-			r=mid;	
+			l=mid+1;	
 		}
 		else
 		{
-			l=mid+1;
+			r=mid-1;
 		}
 	}
 	if(arr[l]==x)
