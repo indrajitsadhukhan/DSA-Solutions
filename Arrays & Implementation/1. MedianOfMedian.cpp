@@ -56,6 +56,7 @@ int kthSmallest(int arr[],int l,int r,int k)
             return kthSmallest(arr,l,pos-1,k);
         return kthSmallest(arr,pos+1,r,k+l-pos-1);
     }
+    return INT_MAX;
 }
 int main()
 {

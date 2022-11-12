@@ -7,16 +7,10 @@ vector<int> prefix_function(string s)
     for(int i=1;i<n;i++)
     {
         int j=pi[i-1];
-        if(i==5)
-            cout<<"J1="<<j<<endl;
         while(j>0 && s[j]!=s[i])
             j=pi[j-1];
-        if(i==5)
-            cout<<"J2="<<j<<endl;
         if(s[i]==s[j])
             j++;
-        if(i==5)
-            cout<<"J3="<<j<<endl;
         pi[i]=j;
     }
     return pi;
